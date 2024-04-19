@@ -1,0 +1,21 @@
+.navList {
+  display: none;
+}
+.navList a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(214, 107, 97);
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+  }
+}
+
+.navList a:hover {
+  color: rgb(96, 93, 240);
+}

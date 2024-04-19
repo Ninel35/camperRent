@@ -1,0 +1,35 @@
+.header {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(248, 247, 246, 0.834);
+    height: 10vh;
+  }
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  color: #e44852;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 40px;
+    font-weight: 700;
+    color: #e44852;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .burgerMenu {
+    display: none;
+  }
+} */

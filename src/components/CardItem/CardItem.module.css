@@ -1,0 +1,37 @@
+.cardImg {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+}
+.cardItem {
+  display: flex;
+}
+.listCategories {
+  display: flex;
+  flex-direction: column;
+}
+.headerList {
+  display: flex;
+  justify-content: space-between;
+}
+.headerList div {
+  display: flex;
+}
+.location {
+  display: flex;
+  gap: 8px;
+}
+.showMoreButton {
+  width: 166px;
+  height: 56px;
+  padding: 16px 40px 16px 40px;
+  border-radius: 200px;
+  background-color: #e44848;
+  color: #ffffff;
+  /* font-family: Inter; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: left;
+}
