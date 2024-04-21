@@ -1,14 +1,28 @@
-.cardImg {
-  width: 290px;
-  height: 310px;
-  border-radius: 10px;
-}
 .cardItem {
   display: flex;
+  width: 888px;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid #10182833;
 }
-.listCategories {
+
+.cardImg {
+  max-width: 290px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cardHeader {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+  width: 526px;
+  gap: 24px;
 }
 .headerList {
   display: flex;
@@ -34,4 +48,19 @@
   line-height: 24px;
   letter-spacing: -0.005em;
   text-align: left;
+}
+.price {
+  /* font-family: Inter; */
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 524px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

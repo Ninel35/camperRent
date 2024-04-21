@@ -1,18 +1,15 @@
-import CardItem from "../CardItem/CardItem"
-
+import { campers } from "../../demoApi";
+import CardItem from "../CardItem/CardItem";
+import css from "./CardList.module.css";
 
 const CardList = () => {
-	return (
-		
-		<ul>
-			<CardItem/>
-          {/* {cards.map(el => 
-            <li key={el.id}></li>
-          )} */}
-		</ul> 
-		
-	
-	)
-}
+  return (
+    <ul className={css.list}>
+      {campers.map((el) => (
+        <CardItem key={el._id} camper={el}></CardItem>
+      ))}
+    </ul>
+  );
+};
 
-export default CardList
+export default CardList;

@@ -1,13 +1,9 @@
-import CardList from "../../components/CardList/CardList"
-
 const HomePage = () => {
-	return (
-		<>
-			<div>HomePage
-				<CardList/>
-			</div>
+  return (
+    <>
+      <div>HomePage</div>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

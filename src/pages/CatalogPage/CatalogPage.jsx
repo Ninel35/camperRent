@@ -1,10 +1,11 @@
+import CardList from "../../components/CardList/CardList";
 
 const CatalogPage = () => {
   return (
     <>
-      <div>CatalogPage</div>
+      <CardList />
     </>
-  )
-}
+  );
+};
 
-export default CatalogPage
+export default CatalogPage;
