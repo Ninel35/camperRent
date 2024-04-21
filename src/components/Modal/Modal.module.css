@@ -10,7 +10,7 @@
   overflow: auto;
   position: absolute;
   width: 982px;
-  height: 720px;
+  height: 80vh;
   top: 40px;
   left: 50%;
   padding: 24px 12px 24px 12px;
@@ -20,4 +20,52 @@
   border-radius: 10px;
   transform: translateX(-50%);
   background-color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.headerModal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reviews {
+  display: flex;
+  gap: 8px;
+}
+
+.reviews li {
+  display: flex;
+  align-items: center;
+}
+.listModal {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 902px;
+  gap: 16px;
+}
+.textDescription {
+  width: 902px;
+  gap: 44px;
+  color: #475467;
+}
+.closeButton {
+  background: transparent;
+}
+.headerTextAndPrice {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.featuresAndReviews {
+  display: flex;
+}
+.image {
+  width: 290px;
+  height: 310px;
+  gap: 0px;
+  border-radius: 10px;
+  object-fit: cover;
 }

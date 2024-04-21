@@ -2,6 +2,9 @@ import { useState } from "react";
 import CategoriesList from "../CategoriesList/CategoriesList";
 import css from "./CardItem.module.css";
 import Modal from "../Modal/Modal";
+import { useDispatch, useSelector } from "react-redux";
+import { selectorFavorites } from "../../store/favoritesSelector";
+import { addFavoriteAction } from "../../store/favoriteSlice";
 
 const CardItem = ({
   camper: {
@@ -27,12 +30,17 @@ const CardItem = ({
   },
 }) => {
   const [showModal, setShowModal] = useState(false);
+  // const favorites = useSelector(selectorFavorites);
+  const dispatch = useDispatch();
 
   const closeOpenModal = () => {
     setShowModal(!showModal);
     console.log("first");
   };
 
+  const addToFavorite = () => {
+    dispatch(addFavoriteAction());
+  };
   return (
     <li className={css.cardItem}>
       <img src={gallery[0]} className={css.cardImg} />
@@ -42,9 +50,9 @@ const CardItem = ({
             <h3 className={css.price}>{name}</h3>
             <div>
               <h3 className={css.price}>€{price}.00</h3>
-              <button type="button" className="burgerMenu">
+              <button type="button" onClick={addToFavorite}>
                 <svg width="18" height="18">
-                  <use href=""></use>
+                  <use href="/src/assets/sprite.svg#heart"></use>
                 </svg>
               </button>
             </div>
@@ -52,13 +60,15 @@ const CardItem = ({
           <ul className={css.location}>
             <li>
               <svg width="18" height="18">
-                <use href=""></use>
+                <use href="/src/assets/sprite.svg#star"></use>
               </svg>
-              {rating}({reviews.length} Reviews)
+              <u>
+                {rating}({reviews.length} Reviews)
+              </u>
             </li>
             <li>
               <svg className={css.icon} width="20" height="20">
-                <use href="../../assets/map-pin.svg#icon-map-pin"></use>
+                <use href="/src/assets/sprite.svg#location"></use>
               </svg>
               {location}
             </li>
@@ -75,7 +85,32 @@ const CardItem = ({
         >
           Show more
         </button>
-        {showModal && <Modal />}
+        {showModal && (
+          <Modal
+            camper={{
+              _id,
+              name,
+              price,
+              rating,
+              location,
+              adults,
+              children,
+              engine,
+              transmission,
+              form,
+              length,
+              width,
+              height,
+              tank,
+              consumption,
+              description,
+              details,
+              gallery,
+              reviews,
+            }}
+            onClose={closeOpenModal}
+          />
+        )}
       </div>
     </li>
   );
